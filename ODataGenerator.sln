@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataGenerator.Tests", "tests\ODataGenerator.Tests\ODataGenerator.Tests.csproj", "{356EF6EA-196D-4F9B-8C82-82E943958FBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataGenerator.Console", "src\ODataGenerator.Console\ODataGenerator.Console.csproj", "{41BE5C56-26EA-4ABC-9D7A-DF8E9A4CC6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataGenerator.Core", "src\ODataGenerator.Core\ODataGenerator.Core.csproj", "{06A9F5DA-5A29-4C28-BDBE-745E6D585B65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataGenerator.Sources.DB2", "src\ODataGenerator.DB2\ODataGenerator.Sources.DB2.csproj", "{EBCF71AC-C2A0-4C4B-A915-70F16E7F3D4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataGenerator.Sources.Sql", "src\ODataGenerator.Sql\ODataGenerator.Sources.Sql.csproj", "{8AD89DB8-6964-4F2F-A59A-007C049198FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataGenerator.Sources.Excel", "src\ODataGenerator.Excel\ODataGenerator.Sources.Excel.csproj", "{5E7071C9-DF40-4A6D-BB38-6785E00F0688}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0C0CAE9F-2299-48C8-9CD8-003F77AD4796}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{5D71EF5E-92B3-4652-A5D6-6DC84308F15C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{356EF6EA-196D-4F9B-8C82-82E943958FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356EF6EA-196D-4F9B-8C82-82E943958FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356EF6EA-196D-4F9B-8C82-82E943958FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356EF6EA-196D-4F9B-8C82-82E943958FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41BE5C56-26EA-4ABC-9D7A-DF8E9A4CC6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41BE5C56-26EA-4ABC-9D7A-DF8E9A4CC6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41BE5C56-26EA-4ABC-9D7A-DF8E9A4CC6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41BE5C56-26EA-4ABC-9D7A-DF8E9A4CC6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A9F5DA-5A29-4C28-BDBE-745E6D585B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A9F5DA-5A29-4C28-BDBE-745E6D585B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A9F5DA-5A29-4C28-BDBE-745E6D585B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A9F5DA-5A29-4C28-BDBE-745E6D585B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBCF71AC-C2A0-4C4B-A915-70F16E7F3D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCF71AC-C2A0-4C4B-A915-70F16E7F3D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCF71AC-C2A0-4C4B-A915-70F16E7F3D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCF71AC-C2A0-4C4B-A915-70F16E7F3D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD89DB8-6964-4F2F-A59A-007C049198FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD89DB8-6964-4F2F-A59A-007C049198FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD89DB8-6964-4F2F-A59A-007C049198FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD89DB8-6964-4F2F-A59A-007C049198FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7071C9-DF40-4A6D-BB38-6785E00F0688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7071C9-DF40-4A6D-BB38-6785E00F0688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7071C9-DF40-4A6D-BB38-6785E00F0688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7071C9-DF40-4A6D-BB38-6785E00F0688}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{356EF6EA-196D-4F9B-8C82-82E943958FBB} = {0C0CAE9F-2299-48C8-9CD8-003F77AD4796}
+		{06A9F5DA-5A29-4C28-BDBE-745E6D585B65} = {5D71EF5E-92B3-4652-A5D6-6DC84308F15C}
+		{EBCF71AC-C2A0-4C4B-A915-70F16E7F3D4A} = {5D71EF5E-92B3-4652-A5D6-6DC84308F15C}
+		{8AD89DB8-6964-4F2F-A59A-007C049198FF} = {5D71EF5E-92B3-4652-A5D6-6DC84308F15C}
+		{5E7071C9-DF40-4A6D-BB38-6785E00F0688} = {5D71EF5E-92B3-4652-A5D6-6DC84308F15C}
+	EndGlobalSection
+EndGlobal
