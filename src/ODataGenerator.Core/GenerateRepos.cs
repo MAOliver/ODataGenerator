@@ -206,7 +206,7 @@ namespace ODataGenerator.Core
         }
 
    
-        public Dictionary<string, List<dynamic>> TableDictionary { get; }
+        public Dictionary<string, List<TableMeta>> TableDictionary { get; }
 
         public List<PocoMapping> Classes { get; }
         public List<RepositoryMapping> Repositories { get; }
@@ -221,7 +221,7 @@ namespace ODataGenerator.Core
             Controllers = CreateControllerMappings(writer.ControllerNamespace, writer.ControllerUsings);
         }
 #region initialization
-        private static Dictionary<string, List<dynamic>> GetTableDictionary( List<TableMeta> tableColumnList, List<KeyMeta> keyTableList )
+        private static Dictionary<string, List<TableMeta>> GetTableDictionary( List<TableMeta> tableColumnList, List<KeyMeta> keyTableList )
         {
 
             var keyDictionary = keyTableList.ToDictionary((o) =>$"{o.KeyTableSchema}.{o.KeyTableName}");
@@ -239,7 +239,7 @@ namespace ODataGenerator.Core
                 {
                     keysList = keyDictionary[key];
                 }
-                var keyInformation = keysList.FirstOrDefault(row => row.KeyTableColumn == o.co);
+                /*var keyInformation = keysList.FirstOrDefault(row => row.KeyTableColumn == o.co);
                 o.IS_PRIMARY_KEY = false;
                 o.HAS_FOREIGN_KEY = false;
 
@@ -247,7 +247,7 @@ namespace ODataGenerator.Core
                 {
                     o.IS_PRIMARY_KEY = keyInformation.COLUMN_NAME == o.COLUMN_NAME;
                     o.FOREIGN_KEY = ((IDictionary<string, dynamic>)keyInformation).ContainsKey("FOREIGN_KEY") ? keyInformation.FOREIGN_KEY : null;
-                }
+                }*/
 
                 tableDictionary[key].Add(o);
             }
@@ -294,11 +294,11 @@ namespace ODataGenerator.Core
         /// <summary>
         /// </summary>
         /// <returns></returns>
-        public PocoMapping CreatePoco(string usingBlock, string nameSpace, KeyValuePair<string, List<dynamic>> obj)
+        public PocoMapping CreatePoco(string usingBlock, string nameSpace, KeyValuePair<string, List<TableMeta>> obj)
         {
             var schema = obj.Key.Split(new[] {"."}, StringSplitOptions.None)[0];
             var className = obj.Key.Split(new[] {"."}, StringSplitOptions.None)[1];
-            return new PocoMapping(usingBlock, nameSpace, schema, className,obj.Value.Select(o => new PropertyField(o.TABLE_SCHEMA, o.TABLE_NAME, o.COLUMN_NAME, o.DATA_TYPE, o.LENGTH, o.NUMERIC_SCALE, o.NUMERIC_PRECISION, o.COLUMN_DEFAULT, o.COLUMN_TEXT, o.COLUMN_HEADING, o.IS_NULLABLE, o.HAS_DEFAULT, o.IS_PRIMARY_KEY)).ToList());
+            return new PocoMapping(usingBlock, nameSpace, schema, className,obj.Value.Select(o => new PropertyField(/*o.TABLE_SCHEMA, o.TABLE_NAME, o.COLUMN_NAME, o.DATA_TYPE, o.LENGTH, o.NUMERIC_SCALE, o.NUMERIC_PRECISION, o.COLUMN_DEFAULT, o.COLUMN_TEXT, o.COLUMN_HEADING, o.IS_NULLABLE, o.HAS_DEFAULT, o.IS_PRIMARY_KEY*/)).ToList());
         }
 
         public RepositoryMapping CreateRepository(string usingBlock, string nameSpace, PocoMapping poco)

@@ -10,6 +10,9 @@ namespace ODataGenerator.Core.ModelGeneration
 {
     public class PropertyField
     {
+        public PropertyField( )
+        { }
+
         public PropertyField
         (
             string tableSchema
@@ -31,7 +34,7 @@ namespace ODataGenerator.Core.ModelGeneration
             TableName = tableName;
             ColumnName = columnName;
             IsNullable = isNullable.GetValueOrDefault(true);//isNullable == "Y"; //none of them are nullable
-            DataType = dataType.AsDb2Type().GetValueOrDefault(DB2Type.VARCHAR).AsCSharpType(IsNullable);
+            DataType = dataType;//e.AsDb2Type().GetValueOrDefault(DB2Type.VARCHAR).AsCSharpType(IsNullable);
             Length = length;
             NumericScale = numericScale;
             NumericPrecision = numericPrecision;
